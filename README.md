@@ -1,4 +1,4 @@
-# PrimasAdmDataBR - data curation primers related to Brazilian administrative data
+# PrimasAdmDataBR - Data Curation Primers related to Brazilian administrative data
 <img align="left" width="98" src="https://github.com/user-attachments/assets/1ad5be15-8d56-40f5-8a67-792192be9c67"/> 
 
 ## Big Data Curation Challenges in Administrative Data Investigation.
