@@ -7,10 +7,9 @@ This document organizes methodological guidance for Brazilian administrative dat
     
 - **Objective**: The main objective of data validation is to ensure a certain level of quality in the final data. Validation seeks to achieve a minimum level of data consistency, resulting in "plausible" data.
     
-- **Relationship with Quality**: Data validation focuses on quality dimensions related to the "structure of data," namely accuracy, comparability, and consistency. It does not directly address process-related quality aspects, such as timeliness.
-	- Versioning in Databases: Evaluating an approach based on information historical presence notation to track changing properties on the databases throughout the time.
-  	- Diversity in the social information: Collecting schema-versioning of databases
-   
+- **Relationship with Quality**: Data validation focuses on quality dimensions related to the "structure of data," namely accuracy, comparability, and consistency. It does not directly address process-related quality aspects. Additionally, it addresses the collection and comparative-based analysis of schema-versioning for each database: 
+	- Historicity: Evaluating an approach based on information historical presence notation to track changing properties on the databases throughout the time.
+	- Maturity Assessment at the Domain-Steward Level: Based on the domain-specificity of each administrative data model, considering information utility and reliability. It evaluates factors ranging from the social, political, and regulatory context of data collection to technical documentation and the potential for open data. 
     
 
 ## 2. Key Elements of Data Validation
