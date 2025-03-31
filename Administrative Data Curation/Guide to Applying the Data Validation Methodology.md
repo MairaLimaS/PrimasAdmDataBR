@@ -3,39 +3,30 @@
 
 ## 1. Understanding Data Validation
 
-- **Definition**: Data validation is an activity that checks whether a combination of values is a member of a set of acceptable combinations. This set may consist of possible values for a single field or valid combinations for a record, column, or a larger dataset.
-    
-- **Objective**: The main objective of data validation is to ensure a certain level of quality in the final data. Validation seeks to achieve a minimum level of data consistency, resulting in "plausible" data.
-    
+- **Definition**: Data validation is an activity that checks whether a combination of values is a member of a set of acceptable combinations. This set may consist of possible values for a single field or valid combinations for a record, column, or a larger dataset.    
+- **Objective**: The main objective of data validation is to ensure a certain level of quality in the final data. Validation seeks to achieve a minimum level of data consistency, resulting in "plausible" data. In the context of Administrative Data Curation, data inspection is an essential process carried out using statistical techniques and standardized procedures to verify the structural and documentary compliance of received datasets.
+- **Validation vs. Editing**: It is important to distinguish data validation from data editing. Validation detects potential errors, indicating whether an error might be present, while editing involves the actual correction of the data.    
 - **Relationship with Quality**: Data validation focuses on quality dimensions related to the "structure of data," namely accuracy, comparability, and consistency. It does not directly address process-related quality aspects. Additionally, it addresses the collection and comparative-based analysis of schema-versioning for each database: 
 	- **Historicity**: Evaluating an approach based on information historical presence notation to track changing properties on the databases throughout the time.
 	- **Maturity Assessment at the Domain-Steward Level**: Based on the domain-specificity of each administrative data model, considering information utility and reliability. It evaluates factors ranging from the social, political, and regulatory context of data collection to technical documentation and the potential for open data. 
     
-
-## 2. Key Elements of Data Validation
+## 2. How to Perform Data Validation: Levels and Rules
 
 Data validation is performed by applying validation rules at different levels of validation.
 
-## 3. Validation Levels
-
-There are different perspectives for classifying validation levels:
-
-### **Business Perspective**
-
-This perspective focuses on validation activities, the amount of information required, and the phases of the validation process. It generally assumes two broad levels:
-
-- **A. Technical Integrity of the File**: Consistency with expected IT structural requirements.
+- **A. Technical Integrity of the File**: Consistency with expected IT structural requirements, such as data corruptions.
     
 - **B. Logical and Statistical Consistency of the Data**: Divided into subcategories that involve increasing levels of information:
-    
-    - **Level 0**: Compliance with expected IT structural requirements (file format, delimiters, number of columns, data format).
-        
-    - **Level 1**: Consistency within the dataset (values within expected limits, consistency between columns, valid dictionary codes, consistency with data sender, plausibility based on prior information, micro and macro consistency of variables).
-        
-    - **Level 2**: Consistency with other datasets within the same domain and data source (revision detection, comparison with previous versions, mirror checks).
-        
-    - **Level 3**: Consistency within the same domain across different data sources (mirror checks between declarations from different sources).
-        
+
+	-**Level 0**: Ensures compliance with expected structural requirements, such as file format, delimiters, number of columns, and data formats.
+        - **Level 1**: Consistency within the dataset (values within expected limits, consistency between columns, valid dictionary codes, consistency with data sender documentation, plausibility based on prior information, micro and macro consistency of variables).
+       	- **Level 2**: Consistency with other data within the same administrative information system, based on the same data source (revision detection, comparison with previous versions).
+        - **B1. Historicity**: Subcategories that track the presence of the same set of variables within the same data information system over time during updates.
+		- **Level 3**: The presence and consistency of a variable across different data updates (plausibility or mirror checks between variables from different time periods).
+        - **B2. Information domain presence**: Subcategories that track the presence of the same set of variables across different data information systems.
+		- **Level 4**: Consistency of a variable across different data information systems within the same or different data providers (plausibility or consistency checks across various data information systems).
+  
+- **B. Logical and Statistical Consistency of the Data: Products**:         
     - **Level 4**: Consistency across separate domains within the same data provider (plausibility or consistency checks across different domains within the same institution).
         
     - **Level 5**: Consistency with data from other providers (plausibility or consistency checks between the provider's data and external data/information).
