@@ -18,15 +18,21 @@ Data validation is performed by applying validation rules at different levels of
     
 - **B. Logical and Statistical Consistency of the Data**: Divided into subcategories that involve increasing levels of information:
 
-	-**Level 0**: Ensures compliance with expected structural requirements, such as file format, delimiters, number of columns, and data formats.
-        - **Level 1**: Consistency within the dataset (values within expected limits, consistency between columns, valid dictionary codes, consistency with data sender documentation, plausibility based on prior information, micro and macro consistency of variables).
-       	- **Level 2**: Consistency with other data within the same administrative information system, based on the same data source (revision detection, comparison with previous versions).
-        - **B1. Historicity**: Subcategories that track the presence of the same set of variables within the same data information system over time during updates.
-		- **Level 3**: The presence and consistency of a variable across different data updates (plausibility or mirror checks between variables from different time periods).
-        - **B2. Information domain presence**: Subcategories that track the presence of the same set of variables across different data information systems.
-		- **Level 4**: Consistency of a variable across different data information systems within the same or different data providers (plausibility or consistency checks across various data information systems).
+  **Level 0**: Ensures compliance with expected structural requirements, such as file format, delimiters, number of columns, and data formats.
   
-- **B. Logical and Statistical Consistency of the Data: Products**:         
+  **Level 1**: Consistency within the dataset (values within expected limits, consistency between columns, valid dictionary codes, consistency with data sender documentation, plausibility based on prior information, micro and macro consistency of variables).
+
+  **Level 2**: Consistency with other data within the same administrative information system, based on the same data source (revision detection, comparison with previous versions).
+
+- **B1. Historicity**: Subcategories that track the presence of the same set of variables within the same data information system over time during updates.
+
+  **Level 3**: The presence and consistency of a variable across different data updates (plausibility or mirror checks between variables from different time periods).
+
+- **B2. Information domain presence**: Subcategories that track the presence of the same set of variables across different data information systems.
+
+  **Level 4**: Consistency of a variable across different data information systems within the same or different data providers (plausibility or consistency checks across various data information systems).
+  
+- **Products**:         
     - **Level 4**: Consistency across separate domains within the same data provider (plausibility or consistency checks across different domains within the same institution).
         
     - **Level 5**: Consistency with data from other providers (plausibility or consistency checks between the provider's data and external data/information).
