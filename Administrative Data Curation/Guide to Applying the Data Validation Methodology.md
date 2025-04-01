@@ -33,7 +33,7 @@ Data validation is performed by applying validation rules at different levels of
   **Level 4**: Consistency of a variable across different data information systems within the same or different data providers (plausibility or consistency checks across various data information systems).
   
 - **Products**:         
-    - **Data descriptive**: Consistency across separate domains within the same data provider (plausibility or consistency checks across different domains within the same institution).
+    - **Data description**: Consistency across separate domains within the same data provider (plausibility or consistency checks across different domains within the same institution).
         
     - **Data Report**:  Document that systematizes the process and results of the initial analysis of one or more datasets. The main objective of this report is to provide a clear understanding of the structure, content, quality, and potential issues within the data, serving as a foundation for subsequent steps in data curation, analysis, and utilization.
         
