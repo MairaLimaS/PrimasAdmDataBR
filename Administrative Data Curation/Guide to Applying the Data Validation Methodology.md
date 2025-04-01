@@ -33,18 +33,11 @@ Data validation is performed by applying validation rules at different levels of
   **Level 4**: Consistency of a variable across different data information systems within the same or different data providers (plausibility or consistency checks across various data information systems).
   
 - **Products**:         
-    - **Data description**: Consistency across separate domains within the same data provider (plausibility or consistency checks across different domains within the same institution).
+    - **Data description**: The purpose is to collect, organize, classify, and represent data based on the main characteristics of the dataset. Its main goal is to convey accurate information so that the researcher can extract the maximum knowledge from the data and avoid incorrect inferences later. 
         
     - **Data Report**:  Document that systematizes the process and results of the initial analysis of one or more datasets. The main objective of this report is to provide a clear understanding of the structure, content, quality, and potential issues within the data, serving as a foundation for subsequent steps in data curation, analysis, and utilization.
         
-
-### **Formal Perspective**
-
-This perspective is based on the decomposition of metadata (universe, measurement time, selected element, and observed variable) and classifies validation functions according to the metadata indices that need to vary to perform a validation function. The validation levels are defined by counting the number of metadata indices that vary in the dataset being validated.
-
-The business perspective is more aligned with daily data management routines, while the formal perspective allows for a more objective comparison between different production processes.
-
-## 4. Validation Rules
+## 3. Validation Rules
 
 Rules are applied to data to verify validation levels. A failure in a rule implies that the corresponding validation level is not achieved. Rules can be broadly classified into:
 
@@ -73,7 +66,7 @@ Rules are applied to data to verify validation levels. A failure in a rule impli
 
 ## 5. Data Validation as a Process
 
-Data validation is performed at different stages of the statistical production process, as described in the **Generic Statistical Business Process Model (GSBPM)**:
+Data validation is performed at different stages of the data curation process:
 
 - **Design Phase (2.5 - Design processing and analysis)**: Defines the statistical processing methodology, including specifying validation routines and creating a validation plan.
     
@@ -84,7 +77,7 @@ Data validation is performed at different stages of the statistical production p
 - **Analysis Phase (6.2 - Validate Outputs)**: In this phase, statisticians validate the quality of the produced outputs by comparing statistics with previous cycles, other relevant data (internal and external), investigating inconsistencies, and performing macro-editing.
     
 
-## 6. Lifecycle of the Data Validation Process
+## 6. Lifecycle of the Data Validation Process: A Maturity Analysis
 
 To improve performance and optimize data validation, considering its lifecycle is beneficial:
 
