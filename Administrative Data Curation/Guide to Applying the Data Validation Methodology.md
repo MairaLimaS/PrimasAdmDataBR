@@ -18,10 +18,7 @@ Data validation is performed by applying validation rules at different levels of
     
 - **B. Logical and Statistical Consistency of the Data**: Divided into subcategories that involve increasing levels of information:
 
-  **Level 0**: Ensures compliance with expected structural requirements, such as file format, delimiters, number of columns, and data formats.
-  
-  **Level 1**: Consistency within the dataset (values within expected limits, consistency between columns, valid dictionary codes, consistency with data sender documentation, plausibility based on prior information, micro and macro consistency of variables).
-
+  **Level 0**: Ensures compliance with expected structural requirements, such as file format, delimiters, number of columns, and data formats. **Level 1**: Consistency within the dataset (values within expected limits, consistency between columns, valid dictionary codes, consistency with data sender documentation, plausibility based on prior information, micro and macro consistency of variables).
   **Level 2**: Consistency with other data within the same administrative information system, based on the same data source (revision detection, comparison with previous versions).
 
 - **B1. Historicity**: Subcategories that track the presence of the same set of variables within the same data information system over time during updates.
@@ -33,48 +30,29 @@ Data validation is performed by applying validation rules at different levels of
   **Level 4**: Consistency of a variable across different data information systems within the same or different data providers (plausibility or consistency checks across various data information systems).
   
 - **Products**:         
-    - **Data description**: The purpose is to collect, organize, classify, and represent data based on the main characteristics of the dataset. Its main goal is to convey accurate information so that the researcher can extract the maximum knowledge from the data and avoid incorrect inferences later. 
-        
+    - **Data description**: The purpose is to collect, organize, classify, and represent data based on the main characteristics of the dataset. Its main goal is to convey accurate information so that the researcher can extract the maximum knowledge from the data and avoid incorrect inferences later.       
     - **Data Report**:  Document that systematizes the process and results of the initial analysis of one or more datasets. The main objective of this report is to provide a clear understanding of the structure, content, quality, and potential issues within the data, serving as a foundation for subsequent steps in data curation, analysis, and utilization.
         
 ## 3. Validation Rules
 
-Rules are applied to data to verify validation levels. A failure in a rule implies that the corresponding validation level is not achieved. Rules can be broadly classified into:
+The data validation rules applied encompass various checks to ensure data quality and reliability. The main validation categories include:  
 
-- **A. Rules to Ensure the Technical Integrity of a Data File**:
-    
-    - Formal validity of entries (valid data type, field length, characters, numeric range).
-        
-    - Presence of an entry.
-        
-    - No occurrence of duplicate units.
-        
-    - All values in one dataset field must be contained in a field of another dataset (e.g., a code list).
-        
-    - Each record has a valid number of related records (in a hierarchical file structure).
-        
-- **B. Logical Validation and Consistency Rules**: These can be classified using dimensions such as identity vs. range checks and simple vs. complex checks.
-    
-    - **Identity checks**: Require a value to be equal to another.
-        
-    - **Range checks**: Verify whether a value falls within a specified range (fixed or dependent on other fields).
-        
-    - **Simple checks**: Based directly on a target field input.
-        
-    - **Complex checks**: Combine multiple fields using functions (sums, differences, ratios).
-        
-
-## 5. Data Validation as a Process
+- **Structural Quality**: This category verifies data compliance with metadata and documentation standards. It involves column schema verification and compliance with the data dictionary, ensuring that the variables in the dataset match the documentation. Additionally, it checks for the field separator identification in files and data encoding (such as UTF-8 or Latin-1). The absence of record displacement is also verified.  
+- **Missing Data and Completeness Analysis**: A crucial part of validation involves assessing the absence of data per variable. This includes counting missing values (counts and missings per variable) and calculating the percentage of variable completeness.  
+- **Integrity**: The verification of potential database corruption is essential to ensure data integrity.  
+- **Data Type Validation**: The classification of variable data types (text, numeric, date, categorical, boolean, array) and the identification of potential misclassifications are performed.  
+- **Format and Structure Verification**: The initial inspection involves checking the initial data structure and the database format (CSV, DBF, XLSX, Parquet, DTA). The dataset size and the number of variables are also analyzed.
+- **Consistency with Previous Versions**: For databases with versions or previous years, the presence of new variables and the compatibility of new versions with previous ones is verified.  
+- **Other Checks**: Validation may also include record counting, analysis of computational resource consumption, and efforts to optimize memory usage. The inspection can involve viewing the first and last rows of the dataset (head and tail of the dataset) and identifying null values per variable.
+-
+- ## 5. Data Validation as a Process
 
 Data validation is performed at different stages of the data curation process:
 
-- **Design Phase (2.5 - Design processing and analysis)**: Defines the statistical processing methodology, including specifying validation routines and creating a validation plan.
-    
-- **Collection Phase (4.3)**: Basic validation of the structure and integrity of received information (file formats, expected fields) may occur, but not content validation.
-    
-- **Processing Phase (5.3 - Review and Validation)**: Dedicated to data validation to identify potential issues, errors, and discrepancies by applying predefined edit rules. Data may be flagged for manual or automatic inspection.
-    
-- **Analysis Phase (6.2 - Validate Outputs)**: In this phase, statisticians validate the quality of the produced outputs by comparing statistics with previous cycles, other relevant data (internal and external), investigating inconsistencies, and performing macro-editing.
+- **Design Phase**: Defines the technical and statistical processing methodology, including specifying validation routines and creating a validation plan.
+- **Collection Phase**: Basic validation of the structure and integrity of received information (file formats, expected fields) may occur, but not content validation.  
+- **Processing Phase**: Dedicated to data validation to identify potential issues, errors, and discrepancies by applying predefined edit rules. Data may be flagged for manual or automatic inspection.    
+- **Analysis Phase**: In this phase, it  validate the quality of the produced outputs by comparing statistics with previous cycles, other relevant data (internal and external), investigating inconsistencies, and performing macro-editing.
     
 
 ## 6. Lifecycle of the Data Validation Process: A Maturity Analysis
