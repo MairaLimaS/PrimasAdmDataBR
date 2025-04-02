@@ -14,19 +14,15 @@
 
 Data validation is performed by applying validation rules at different levels of validation.
 
-- **A. Technical Integrity of the File**: Consistency with expected IT structural requirements, such as data corruptions.
-    
+- **A. Technical Integrity of the File**: Consistency with expected IT structural requirements, such as data corruptions.  
 - **B. Logical and Statistical Consistency of the Data**: Divided into subcategories that involve increasing levels of information:
 
-  **Level 0**: Ensures compliance with expected structural requirements, such as file format, delimiters, number of columns, and data formats. **Level 1**: Consistency within the dataset (values within expected limits, consistency between columns, valid dictionary codes, consistency with data sender documentation, plausibility based on prior information, micro and macro consistency of variables).
-  **Level 2**: Consistency with other data within the same administrative information system, based on the same data source (revision detection, comparison with previous versions).
+  **Level 0**: Ensures compliance with expected structural requirements, such as file format, delimiters, number of columns, and data formats. **Level 1**: Consistency within the dataset (values within expected limits, consistency between columns, valid dictionary codes, consistency with data sender documentation, plausibility based on prior information, micro and macro consistency of variables). **Level 2**: Consistency with other data within the same administrative information system, based on the same data source (revision detection, comparison with previous versions).
 
 - **B1. Historicity**: Subcategories that track the presence of the same set of variables within the same data information system over time during updates.
-
   **Level 3**: The presence and consistency of a variable across different data updates (plausibility or mirror checks between variables from different time periods).
 
 - **B2. Information domain presence**: Subcategories that track the presence of the same set of variables across different data information systems.
-
   **Level 4**: Consistency of a variable across different data information systems within the same or different data providers (plausibility or consistency checks across various data information systems).
   
 - **Products**:         
@@ -42,9 +38,12 @@ The data validation rules applied encompass various checks to ensure data qualit
 - **Integrity**: The verification of potential database corruption is essential to ensure data integrity.  
 - **Data Type Validation**: The classification of variable data types (text, numeric, date, categorical, boolean, array) and the identification of potential misclassifications are performed.  
 - **Format and Structure Verification**: The initial inspection involves checking the initial data structure and the database format (CSV, DBF, XLSX, Parquet, DTA). The dataset size and the number of variables are also analyzed.
+- **JsonSchema Creation**:
+  **Minimal Quality Assurance**:
 - **Consistency with Previous Versions**: For databases with versions or previous years, the presence of new variables and the compatibility of new versions with previous ones is verified.  
 - **Other Checks**: Validation may also include record counting, analysis of computational resource consumption, and efforts to optimize memory usage. The inspection can involve viewing the first and last rows of the dataset (head and tail of the dataset) and identifying null values per variable.
--
+
+
 - ## 5. Data Validation as a Process
 
 Data validation is performed at different stages of the data curation process:
@@ -52,8 +51,7 @@ Data validation is performed at different stages of the data curation process:
 - **Design Phase**: Defines the technical and statistical processing methodology, including specifying validation routines and creating a validation plan.
 - **Collection Phase**: Basic validation of the structure and integrity of received information (file formats, expected fields) may occur, but not content validation.  
 - **Processing Phase**: Dedicated to data validation to identify potential issues, errors, and discrepancies by applying predefined edit rules. Data may be flagged for manual or automatic inspection.    
-- **Analysis Phase**: In this phase, it  validate the quality of the produced outputs by comparing statistics with previous cycles, other relevant data (internal and external), investigating inconsistencies, and performing macro-editing.
-    
+- **Analysis Phase**: In this phase, it  validate the quality of the produced outputs by comparing statistics with previous cycles, other relevant data (internal and external), investigating inconsistencies, and performing macro-editing.    
 
 ## 6. Lifecycle of the Data Validation Process: A Maturity Analysis
 
