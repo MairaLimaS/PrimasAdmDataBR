@@ -39,36 +39,34 @@ The data validation rules applied encompass various checks to ensure data qualit
 - **Data Type Validation**: The classification of variable data types (text, numeric, date, categorical, boolean, array) and the identification of potential misclassifications are performed.  
 - **Format and Structure Verification**: The initial inspection involves checking the initial data structure and the database format (CSV, DBF, XLSX, Parquet, DTA). The dataset size and the number of variables are also analyzed.
 - **Data Schema**: Pattern-based data representation.
-  **Minimal Data Quality Assurance**: Refers to the establishment of clear criteria that define the minimum acceptable quality standards for a dataset to be considered usable. It involves setting threshold values and essential conditions—such as completeness, accuracy, consistency, and timeliness—that data must meet to support reliable analysis and informed decision-making.
+- **Minimal Data Quality Assurance**: Refers to the establishment of clear criteria that define the minimum acceptable quality standards for a dataset to be considered usable. It involves setting threshold values and essential conditions—such as completeness, accuracy, consistency, and timeliness—that data must meet to support reliable analysis and informed decision-making.
 - **Consistency with Previous Versions**: For databases with versions or previous years, the presence of new variables and the compatibility of new versions with previous ones is verified.  
 - **Other Checks**: Validation may also include record counting, analysis of computational resource consumption, and efforts to optimize memory usage. The inspection can involve viewing the first and last rows of the dataset (head and tail of the dataset) and identifying null values per variable.
 
-
-- ## 5. Data Validation as a Process
+- ## 4. Data Validation as a Process
 
 Data validation is performed at different stages of the data curation process:
 
 - **Design Phase**: Defines the technical and statistical processing methodology, including specifying validation routines and creating a validation plan.
 - **Collection Phase**: Basic validation of the structure and integrity of received information (file formats, expected fields) may occur, but not content validation.  
 - **Processing Phase**: Dedicated to data validation to identify potential issues, errors, and discrepancies by applying predefined edit rules. Data may be flagged for manual or automatic inspection.    
-- **Analysis Phase**: In this phase, it  validate the quality of the produced outputs by comparing statistics with previous cycles, other relevant data (internal and external), investigating inconsistencies, and performing macro-editing.    
+- **Analysis Phase**: In this phase, it  validate the quality of the produced outputs by comparing statistics with previous cycles, other relevant data (same information system, internal or external*), investigating inconsistencies, and performing macro-editing.    
 
-## 6. Lifecycle of the Data Validation Process: A Maturity Analysis
+## 5. Lifecycle of the Data Validation Process: A Maturity Analysis
 
 To improve performance and optimize data validation, considering its lifecycle is beneficial:
 
 - **Design**: Study datasets, variables, and their relationships; assess quality requirements; determine a satisfactory set of validation rules.
     
-- **Implementation**: Formalize validation rules in a common syntax; define metrics; test and evaluate results; refine rules.
+- **Implementation**: For/malize validation rules in a common syntax; define metrics; test and evaluate results; refine rules.
     
 - **Execution**: Verify data against validation rules; measure results; communicate error/warning messages.
     
 - **Review**: Analyze stakeholder feedback; assess execution results; identify and prioritize issues for design improvements.
     
-
 This cycle is iterative, with review results being used to refine validation rules and processes.
 
-## 7. Metrics for Data Validation
+## 6. Metrics for Data Validation
 
 Indicators are essential to provide quantitative information that helps design, maintain, and monitor a data validation procedure. Metrics can refer to a single rule or the entire validation procedure and may be based on:
 
@@ -79,7 +77,7 @@ Indicators are essential to provide quantitative information that helps design, 
 - **Observed data and reference data (e.g., imputed or simulated data)**: Allow for a more accurate measure of validation effectiveness. They may include confusion matrices, precision, sensitivity, specificity, and severity indicators of errors.
     
 
-## 8. Evaluation of Validation Rules
+## 7. Evaluation of Validation Rules
 
 Evaluating validation rules involves analyzing their properties (completeness, redundancy, feasibility, and complexity) and performance when applied to data.
 
@@ -94,4 +92,4 @@ Evaluating validation rules involves analyzing their properties (completeness, r
 
 ## Conclusion
 
-Applying a data validation methodology requires a systematic and iterative approach. Clearly defining validation objectives, understanding different levels and types of rules, integrating validation into the statistical production process, and monitoring process efficiency through appropriate metrics are essential. Continuous evaluation and refinement of rules are crucial to ensuring the quality of statistical data.
+Applying a data validation methodology requires a systematic and iterative approach. Clearly defining validation objectives, understanding different levels and types of rules, integrating validation into the data engineering and statistical production process, and monitoring process efficiency through appropriate metrics are essential. Continuous evaluation and refinement of rules are crucial to ensuring the quality of data.
