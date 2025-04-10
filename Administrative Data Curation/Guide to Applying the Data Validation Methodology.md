@@ -38,8 +38,8 @@ The data validation rules applied encompass various checks to ensure data qualit
 - **Integrity**: The verification of potential database corruption is essential to ensure data integrity.  
 - **Data Type Validation**: The classification of variable data types (text, numeric, date, categorical, boolean, array) and the identification of potential misclassifications are performed.  
 - **Format and Structure Verification**: The initial inspection involves checking the initial data structure and the database format (CSV, DBF, XLSX, Parquet, DTA). The dataset size and the number of variables are also analyzed.
-- **JsonSchema Creation**:
-  **Minimal Quality Assurance**:
+- **Data Schema**: Pattern-based data representation.
+  **Minimal Data Quality Assurance**: Refers to the establishment of clear criteria that define the minimum acceptable quality standards for a dataset to be considered usable. It involves setting threshold values and essential conditions—such as completeness, accuracy, consistency, and timeliness—that data must meet to support reliable analysis and informed decision-making.
 - **Consistency with Previous Versions**: For databases with versions or previous years, the presence of new variables and the compatibility of new versions with previous ones is verified.  
 - **Other Checks**: Validation may also include record counting, analysis of computational resource consumption, and efforts to optimize memory usage. The inspection can involve viewing the first and last rows of the dataset (head and tail of the dataset) and identifying null values per variable.
 
