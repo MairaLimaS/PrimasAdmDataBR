@@ -68,7 +68,7 @@ This cycle is iterative, with review results being used to refine validation rul
 
 ## 6. Metrics for Data Validation
 
-Indicators are essential to provide quantitative information that helps design, maintain, and monitor a data validation procedure. Metrics can refer to a single rule or the entire validation procedure.
+Indicators will provide quantitative information that helps design, maintain, and monitor a data validation procedure. Metrics can refer to a single rule or the entire validation procedure.
 
 ## 7. Evaluation of Validation Rules
 
