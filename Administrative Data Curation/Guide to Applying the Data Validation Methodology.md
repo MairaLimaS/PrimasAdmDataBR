@@ -33,15 +33,15 @@ Data validation is performed by applying validation rules at different levels of
 
 The data validation rules applied encompass various checks to ensure data quality and reliability. The main validation categories include:  
 
-- **Structural Quality**: This category verifies data compliance with metadata and documentation standards. It involves column schema verification and compliance with the data dictionary, ensuring that the variables in the dataset match the documentation. Additionally, it checks for the field separator identification in files and data encoding (such as UTF-8 or Latin-1). The absence of record displacement is also verified.  
-- **Missing Data and Completeness Analysis**: A crucial part of validation involves assessing the absence of data per variable. This includes counting missing values (counts and missings per variable) and calculating the percentage of variable completeness.  
-- **Integrity**: The verification of potential database corruption is essential to ensure data integrity.  
-- **Data Type Validation**: The classification of variable data types (text, numeric, date, categorical, boolean, array) and the identification of potential misclassifications are performed.  
 - **Format and Structure Verification**: The initial inspection involves checking the initial data structure and the database format (CSV, DBF, XLSX, Parquet, DTA). The dataset size and the number of variables are also analyzed.
-- **Data Schema**: Pattern-based data representation.
+- **Integrity**: The verification of potential database corruption is essential to ensure data integrity.  
+- **Structural Quality**: This category verifies data compliance with metadata and documentation standards. It involves column schema verification and compliance with the data dictionary, ensuring that the variables in the dataset match the documentation. Additionally, it checks for the field separator identification in files and data encoding (such as UTF-8 or Latin-1); The absence of record displacement is also verified. The inspection can also involve viewing the random rows of the dataset and identifying values per variable.
+- **Data Schema**:  Infer or extract the underlying data model/pattern to guide deeper inspections.
+- **Data Type Validation**: The classification of variable data types (text, numeric, date, categorical, boolean, array) and the identification of potential misclassifications are performed.  
+- **Missing Data and Completeness Analysis**: A crucial part of validation involves assessing the absence of data per variable. This includes counting missing values (counts and missings per variable) and calculating the percentage of variable completeness.  
+- **Consistency with Previous Versions**: For databases with versions or previous years, the presence of new variables, record counts and the compatibility of new versions with previous ones is verified. 
 - **Minimal Data Quality Assurance**: Refers to the establishment of clear criteria that define the minimum acceptable quality standards for a dataset to be considered usable. It involves setting threshold values and essential conditions—such as completeness, accuracy, consistency, and timeliness—that data must meet to support reliable analysis and informed decision-making.
-- **Consistency with Previous Versions**: For databases with versions or previous years, the presence of new variables and the compatibility of new versions with previous ones is verified.  
-- **Other Checks**: Validation may also include record counting, analysis of computational resource consumption, and efforts to optimize memory usage. The inspection can involve viewing the first and last rows of the dataset (head and tail of the dataset) and identifying null values per variable.
+- **Provenance Check**: Retrieves the history and legacy of the dataset within the catalog. Methodologically, it includes information from both the Data Inventory and the Data Documentation.
 
 - ## 4. Data Validation as a Process
 
@@ -58,9 +58,9 @@ To improve performance and optimize data validation, considering its lifecycle i
 
 - **Design**: Study datasets, variables, and their relationships; assess quality requirements; determine a satisfactory set of validation rules.
     
-- **Implementation**: For/malize validation rules in a common syntax; define metrics; test and evaluate results; refine rules.
+- **Implementation**: Formalize validation rules in a common syntax; define metrics; test and evaluate results; refine rules.
     
-- **Execution**: Verify data against validation rules; measure results; communicate error/warning messages.
+- **Execution**: Verify data against validation rules; measure results.
     
 - **Review**: Analyze stakeholder feedback; assess execution results; identify and prioritize issues for design improvements.
     
@@ -68,28 +68,21 @@ This cycle is iterative, with review results being used to refine validation rul
 
 ## 6. Metrics for Data Validation
 
-Indicators are essential to provide quantitative information that helps design, maintain, and monitor a data validation procedure. Metrics can refer to a single rule or the entire validation procedure and may be based on:
-
-- **Only validation rules (properties)**: Assessment of completeness, redundancy, feasibility, and complexity of rules.
-    
-- **Only observed data**: Number of failed records, minimum number of variables to be modified for records to pass validation, counts of approved, failed, and missing records per rule, etc.
-    
-- **Observed data and reference data (e.g., imputed or simulated data)**: Allow for a more accurate measure of validation effectiveness. They may include confusion matrices, precision, sensitivity, specificity, and severity indicators of errors.
-    
+Indicators are essential to provide quantitative information that helps design, maintain, and monitor a data validation procedure. Metrics can refer to a single rule or the entire validation procedure.
 
 ## 7. Evaluation of Validation Rules
 
-Evaluating validation rules involves analyzing their properties (completeness, redundancy, feasibility, and complexity) and performance when applied to data.
+Evaluating validation rules involves analyzing their properties and performance when applied to data.
 
 - **Completeness**: The extent to which prior knowledge about a dataset is expressed in validation rules. It can be assessed through peer review or formal methods that verify the coverage of variables by the rules.
     
 - **Redundancy**: The presence of rules that always produce the same result as other rules when satisfied. Removing redundancies can simplify the rule set but may reduce readability.
     
-- **Feasibility (Coherence)**: Whether a set of rules can be simultaneously satisfied. Formal methods (such as Fourier-Motzkin elimination or mixed-integer programming) can detect inconsistencies.
+- **Coherence**: Whether a set of rules can be simultaneously satisfied. 
     
 - **Complexity**: Can refer to the variety of information needed to evaluate a rule, computational complexity, or the cohesion of a rule set (interconnection through shared variables). A graphical representation of dependencies between rules and variables can provide insights into cohesion.
     
 
 ## Conclusion
+Applying a data validation methodology requires a systematic and iterative approach, involving continuous evaluation and refinement of rules. It is important to clearly define validation objectives, understand the different levels and types of rules, and integrate validation into the data curation, analysis, engineering and statistical production processes.
 
-Applying a data validation methodology requires a systematic and iterative approach. Clearly defining validation objectives, understanding different levels and types of rules, integrating validation into the data engineering and statistical production process, and monitoring process efficiency through appropriate metrics are essential. Continuous evaluation and refinement of rules are crucial to ensuring the quality of data.
